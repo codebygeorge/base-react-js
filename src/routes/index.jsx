@@ -6,6 +6,7 @@ import { Row } from '../styles';
 
 const Home = lazy(() => import('../pages/home'));
 const SingleItem = lazy(() => import('../pages/single-item'));
+const DragNDrop = lazy(() => import('../components/drag-n-drop'));
 
 export default function AppRoutes() {
     return (
@@ -21,6 +22,9 @@ export default function AppRoutes() {
                     </Route>
                     <Route path="/home/:catId">
                         <SingleItem/>
+                    </Route>
+                    <Route path="/drag">
+                        <DragNDrop/>
                     </Route>
                     <Redirect to="/home"/>
                 </Switch>
